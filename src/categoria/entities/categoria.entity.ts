@@ -17,6 +17,7 @@ export class Categoria{
     @Column({length: 200, nullable: false})
     nome_categoria: string;
 
+    //Relacionamento com produto
     @OneToMany(() => Produto, produto => produto.categoria)
   produtos: Produto[];
 }
